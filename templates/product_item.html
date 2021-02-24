@@ -1,0 +1,9 @@
+{% load static %}
+<li class="list__item ">
+    <div class="item__photo" style='background-image: url("{{ product.img_url }}")'></div>
+    <h2 class="item__title">{{ product.product_name }} <p class="sup">tm</p></h2>
+    <p class="item__description">
+        {{ product.brand_name }}
+    </p>
+    <p class="item__price">${{ product.price }}</p>
+</li>

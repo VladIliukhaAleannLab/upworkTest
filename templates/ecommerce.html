@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Ecommerce{% endblock %}
+
+{% block description %}This page is an awesome home page.{% endblock %}
+
+
+{% block content %}
+    <div class="product">
+        <ul class="content__list">
+            <li class="list__item list__item--ad">
+                <h2 class="item__title">New Releases</h2>
+                <p class="item__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                </p>
+                <span class="item__button">View More ></span>
+            </li>
+            {% include 'product_list.html' with products=products %}
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  * {
+    font-family: "Segoe UI Regular", sans-serif;
+    box-sizing: border-box;
+  }
+}
+
+.container {
+  margin: 0 245px;
+
+  @media screen and (max-width: 1200px) {
+    margin: 0 16px;
+  }
+}
+
+header {
+  background: black;
+  color: white;
+  margin-bottom: 96px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 250px;
+
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .title {
+      width: 70%;
+      font-size: 60px;
+      font-family: "Segoe UI Semibold", sans-serif;
+
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        font-size: 40px;
+      }
+    }
+
+    .subtitle {
+      font-size: 25px;
+      text-align: right;
+
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        font-size: 20px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.content {
+  .container {
+    .content__list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+
+      * {
+        text-transform: uppercase;
+      }
+    }
+
+    .list__item {
+      display: flex;
+      flex-direction: column;
+      width: 170px;
+      height: 320px;
+      padding: 28px 0;
+      margin: 32px 8px;
+    }
+
+    .list__item:not(.list__item--ad) {
+      .item__description {
+        max-height: 42px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .item__photo {
+      width: 100%;
+      height: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    .item__title {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      font-size: 15px;
+    }
+
+    .sup {
+      font-size: 8px;
+    }
+
+    .item__description {
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    .item__button {
+      color: #22A1C4;
+      cursor: pointer;
+    }
+
+    .item__price {
+      text-align: center;
+      font-family: "Segoe UI Semibold", sans-serif;
+    }
+
+    .list__item--ad {
+      padding: 28px 22px;
+      background: #EFEFEF;
+      font-family: "Segoe UI Semibold", sans-serif;
+
+      * {
+        text-transform: none;
+      }
+
+      .item__title {
+        margin-top: 0;
+        font-size: 40px;
+        line-height: 1.2;
+      }
+
+      .item__description {
+        justify-content: flex-start;
+        -ms-text-align-last: right;
+        text-align: left;
+      }
+    }
+  }
+}
+
